@@ -1,0 +1,19 @@
+# .github/workflows/automation.yml
+
+name: My Automation Pull Request Target
+
+on:
+  pull_request_target:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Print Hello
+        run: echo "Hello CI/CD"
